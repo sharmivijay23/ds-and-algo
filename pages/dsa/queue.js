@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { useState } from "react";
-import { useQueueStore } from "./queue_store";
+import { useQueueStore } from "../../store/queue_store";
 
 export default function Queue() {
 

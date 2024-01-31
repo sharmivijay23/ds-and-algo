@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from "react"
-import { useStackStore } from "./store"
+import { useStackStore } from "../../store/store"
 
 
 const Stack = () => {
