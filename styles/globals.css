@@ -126,6 +126,7 @@ h2 {
   margin-top:30px;
 }
 
+
 .column-container {
   display: flex;
   flex-direction: column-reverse;
@@ -144,6 +145,46 @@ h2 {
   border-color: #365314;
   justify-content: center;
   align-items: center;
+}
+
+.flex-container-cq {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 75%
+}
+
+
+.circularQueueItem {
+  display:flex;
+  height: 40px;
+  width: 60px;
+  padding: 2px;
+  border: 2px solid #92400e;
+  border-radius: 3px;
+  background-color: #f7fee7 ;
+  border-color: #365314;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  display: flex;
+  align-self: center;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid black; /* Adjust color as needed */
+  margin: 0 10px; /* Adjust margin between boxes and arrows */
+
+}
+
+.box-arrow{
+  display: flex;
+  flex-direction: row;
 }
 
 button {

@@ -9,26 +9,26 @@ const Stack = () => {
 
     const { size, storeStackSize, resetArray, pop_result, popItem, array, storeValue } = useStackStore();
 
-    const [number, setNumber] = useState(null);
+    const [number, setNumber] = useState("");
     const [stackSize, setStackSize] = useState();
     const [isInputDisabled, setIsInputDisabled] = useState(false);
     const [isPopDisabled, setIsPopDisabled] = useState(true)
     const [isFlexView, setIsFlexView] = useState(false)
-    const [isStackNew, setIsStackNew] = useState(true)
+    const [isCreateStackNew, setIsCreateStackNew] = useState(true)
     const [isResetStack, setIsResetStack] = useState(true)
-    const [isStackInput, setIsStackInput] = useState(false)
+    const [isStackSizeInput, setIsStackSizeInput] = useState(false)
 
     const handleInputStackSize = (e) => {
         setStackSize(e.target.value)
-        setIsStackNew(false)
+        setIsCreateStackNew(false)
     }
 
     const createStack = () => {
         storeStackSize(stackSize)
         setIsFlexView(true)
-        setIsStackNew(true)
+        setIsCreateStackNew(true)
         setIsResetStack(false)
-        setIsStackInput(true)
+        setIsStackSizeInput(true)
         console.log("size" + stackSize)
     }
 
@@ -62,9 +62,9 @@ const Stack = () => {
         resetArray();
         console.log(array)
         setIsFlexView(false)
-        setIsStackNew(false)
+        setIsCreateStackNew(false)
         setIsResetStack(true)
-        setIsStackInput(false)
+        setIsStackSizeInput(false)
         setIsInputDisabled(false)
     }
     const handleKeyDown = (event) => {
@@ -117,8 +117,8 @@ const Stack = () => {
                     placeholder="Enter stack size"
                     onChange={handleInputStackSize}
                     onKeyDown={handleStackClick}
-                    disabled={isStackInput} />
-                <button className="sizeContainer" onClick={createStack} disabled={isStackNew}> Create Stack </button>
+                    disabled={isStackSizeInput} />
+                <button className="sizeContainer" onClick={createStack} disabled={isCreateStackNew}> Create Stack </button>
                 <button className="sizeContainer" onClick={handleReset} disabled={isResetStack}>Reset Stack</button>
             </h2>
             {isFlexView && stackContainer()}

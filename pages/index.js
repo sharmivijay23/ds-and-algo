@@ -27,7 +27,7 @@ export default function Home() {
             <p>Circular Queue implementation to enqueue and dequeue items.</p>
           </Link>
         </div>
-      </main >
+      </main>
       <style jsx>{`
         main {
           padding: 0.5rem 0;
